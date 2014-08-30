@@ -1,3 +1,6 @@
+UPDATE 2014.8.30
+modify time activity for temperature record use
+
 Android-Wheel
 
 This project initially was a mirror from this repository :
