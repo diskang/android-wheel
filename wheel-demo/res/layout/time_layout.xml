@@ -5,28 +5,124 @@
 	android:layout_width="fill_parent"
 	android:layout_marginTop="12dp"
 	android:orientation="vertical"
-	android:background="@drawable/layout_bg">
-	
-	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		android:layout_gravity="center_horizontal"
-		android:paddingLeft="12dp"
-		android:paddingRight="12dp"
-		android:paddingTop="20dp">
+	android:background="#E1E0DE">
+	<TextView
+        android:id="@+id/temp_textView1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#EB7A77"
+        android:gravity="center"
+        android:text="体温记录"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+    
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_horizontal"
+	    android:layout_margin="10dp"
+	    android:background="@drawable/corners_bg"
+	    android:gravity="center_horizontal" >
 	  
 	  	<kankan.wheel.widget.WheelView android:id="@+id/hour"
+	  	    android:layout_marginLeft="40dp"
+	  	    android:layout_marginTop="10dp"
+	  	    android:layout_marginBottom="10dp"
 			android:layout_height="wrap_content"
-			android:layout_width="140dp"/>
-		<kankan.wheel.widget.WheelView android:id="@+id/mins"
+			android:layout_width="wrap_content"
+			android:layout_weight="2"/>
+		<kankan.wheel.widget.WheelView 
+		    android:id="@+id/mins"
+		   
+		    
+	  	    android:layout_marginTop="10dp"
+	  	    android:layout_marginBottom="10dp"
 			android:layout_height="wrap_content"
-			android:layout_width="140dp"/>
+			android:layout_width="wrap_content"
+			android:layout_weight="1"/>
+
+		<TextView
+		    android:id="@+id/temperature_degree"
+		    android:layout_width="wrap_content"
+		    android:layout_height="100dp"
+		    android:layout_margin="10dp"
+		    android:layout_weight="0.5"
+		    android:gravity="center"
+		    android:text="℃"
+		    android:textColor="#2B3439"
+		    android:textSize="80sp" />
+
 	</LinearLayout>
-	
-	<TimePicker android:id="@+id/time"
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_horizontal"
+	    android:layout_margin="10dp"
+	    android:background="@drawable/corners_bg"
+	    android:gravity="center_horizontal"
+	    android:paddingLeft="12dp"
+	    android:paddingRight="12dp"
+	    android:paddingTop="10dp" >
+
+		<TextView
+		    android:id="@+id/temperature_show_base"
+		    android:layout_width="wrap_content"
+		    android:layout_height="100dp"
+		    android:text="测得的体温为："
+		    android:textColor="#EB7A77"
+		    android:textSize="40sp" />
+		<TextView
+		    android:id="@+id/temperature_show_number"
+		    android:layout_width="wrap_content"
+		    android:layout_height="100dp"
+		    android:text="37.0"
+		    android:textColor="#434343"
+		    android:textSize="70sp" />
+		<TextView
+		    android:id="@+id/temperature_show_base2"
+		    android:layout_width="wrap_content"
+		    android:layout_height="100dp"
+		    android:text="℃"
+		    android:textColor="#EB7A77"
+		    android:textSize="40sp" />
+	</LinearLayout>
+	<!-- TimePicker android:id="@+id/time"
 		android:layout_marginTop="20dp"
-		android:layout_height="wrap_content"
+		android:layout_height="0dp"
 		android:layout_width="fill_parent"
-		android:layout_weight="1"/>
-		
+		android:layout_weight="1"/-->
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_horizontal"
+	    android:layout_margin="10dp"
+	    android:background="@drawable/corners_bg"
+	    android:gravity="center_horizontal"
+	    android:paddingLeft="12dp"
+	    android:paddingRight="12dp"
+	    android:paddingTop="10dp" >
+		<Button 
+		    android:id="@+id/t_submit_button"
+		    android:layout_width="wrap_content"
+		    android:layout_height="80dp"
+		    android:layout_weight="1"
+		    android:layout_margin="20dp"
+		    android:text="确定提交"
+		    android:textSize="40sp"
+		    android:textColor="#FFFFFF"
+		    android:background="#EB7A77"
+		    />
+		<Button 
+		    android:id="@+id/t_cancel_button"
+		    android:layout_width="wrap_content"
+		    android:layout_height="80dp"
+		    android:layout_weight="1"
+		    android:layout_margin="20dp"
+		    android:text="取消"
+		    android:textSize="40sp"
+		    android:textColor="#FFFFFF"
+		    android:background="#EB7A77"
+		    />
+	</LinearLayout>
 </LinearLayout>
